@@ -21,6 +21,12 @@
         a {
             color: #0077cc;
         }
+        form {
+            background: #ffffff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            margin-top: 20px;
+        }
     </style>
 </head>
 
@@ -49,6 +55,31 @@
     <footer>
         <p>Thank you for visiting my website! </p>
     </footer>
+
+    <!-- CMS Form to Update Content -->
+    <form action="/" method="post">
+        <label><strong>Update Content:</strong></label><br><br>
+
+        <label>Title:</label>
+        <input type="text" name="title" value="{{ title }}" style="width: 100%; padding: 10px; margin-bottom: 10px;"><br>
+        
+        <label>Introduction:</label><br>
+        <textarea name="introduction" rows="3" style="width: 100%; padding: 10px; margin-bottom: 10px;">{{ introduction }}</textarea><br>
+        
+        <label>About Me:</label><br>
+        <textarea name="about_me" rows="5" style="width: 100%; padding: 10px; margin-bottom: 10px;">{{ about_me }}</textarea><br>
+
+        <label>My Work:</label><br>
+        <textarea name="my_work" rows="5" style="width: 100%; padding: 10px; margin-bottom: 10px;">{{ my_work }}</textarea><br>
+
+        <label>Contact Info:</label><br>
+        <textarea name="contact_info" rows="3" style="width: 100%; padding: 10px; margin-bottom: 10px;">{{ contact_info }}</textarea><br>
+
+        <label>Footer:</label><br>
+        <textarea name="footer" rows="3" style="width: 100%; padding: 10px; margin-bottom: 10px;">{{ footer }}</textarea><br>
+
+        <input type="submit" value="Update Content" style="padding: 10px 15px; cursor: pointer;">
+    </form>
 
 </body>
 
